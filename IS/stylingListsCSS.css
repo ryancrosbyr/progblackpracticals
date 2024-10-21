@@ -5,6 +5,7 @@ html {
 
   h2 {
     font-size: 2rem;
+    background-color: blueviolet;
   }
 
   ul,ol,dl,p {
@@ -34,14 +35,52 @@ html {
 
   ol {
     list-style-type: upper-roman;
+    background-color: yellow;
   }
 
   /* Description list styles */
 
   dd, dt {
     line-height: 1.5;
+    background-color: darkcyan;
   }
 
   dt {
     font-weight: bold;
   }
+
+  body {
+    background-color: red;
+  }
+
+  p {
+    background-color: green;
+  }
+
+  li{
+    background-color: cyan;
+  }
+
+  p.special {
+    color: white;
+    border: 5px solid black;
+    padding: 10px;
+  }
+
+  #A {
+    width:200px;
+    float: left;
+  }
+
+  #B {
+    width: 600px;
+    float: right;
+  }
+
+  #C {
+    clear: both;
+  }
+
+
+
+
