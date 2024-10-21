@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Styling lists</title>
+    <style>
+      /* General styles */
+
+      html {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 10px;
+      }
+
+      h1 {
+        text-decoration: underline;
+        color: black;
+        font-size: 3rem;
+        text-align: center;
+        background-image: url(leaf.png);
+        background-position: top left;
+        background-repeat: repeat-x;
+        background-color: rgba(255,255,255,0.4);
+        background-blend-mode: lighten;
+        margin: 10px;
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      ul,ol,dl,p {
+        font-size: 1.5rem;
+      }
+
+      li, p {
+        line-height: 1.5;
+      }
+
+      p {
+        font-style: italic;
+      }
+
+      /* Unordered list styles */
+
+      ul {
+        padding-left: 2rem;
+        list-style-type: square;
+      }
+
+      ul li {
+        padding-left: 2rem;
+        background-image: url(star.svg);
+        background-position: 0 0;
+        background-size: 1.6rem 1.6rem;
+        background-repeat: no-repeat;
+      }
+
+      /* Ordered list styles */
+
+      ol {
+        list-style-type: upper-roman;
+      }
+
+      /* Description list styles */
+
+      dd, dt {
+        line-height: 1.5;
+      }
+
+      dt {
+        font-weight: bold;
+      }
+
+      #shopping-list:hover {
+        background-color: #377b6d;
+        transition-duration: 0.2s;
+      }
+
+      #recipes:hover {
+        background-color: #8bcabd;
+        transition-duration: 0.2s;
+      }
+
+      #descriptions:hover {
+        background-color: #e5f3f0;
+        transition-duration: 0.2s;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <h1>Vegetarian Meal Plan</h1>
+
+    <div id = "shopping-list">
+      <h2>Shopping List</h2>
+
+      <p>The vegetarian ingredients for your meal:</p>
+
+      <ul>
+        <li>Humous</li>
+        <li>Pitta</li>
+        <li>Green salad</li>
+        <li>Halloumi</li>
+      </ul>
+    </div>
+
+    <div id = "recipes">
+      <h2>Recipe List</h2>
+
+      <p>The instructions to turn ingredients into a delicious meal:</p>
+
+      <ol start="4">
+        <li>Toast pitta, leave to cool, then slice down the edge.</li>
+        <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+        <li>Wash and chop the salad.</li>
+        <li>Fill pitta with salad, humous, and fried halloumi.</li>
+      </ol>
+    </div>
+
+    <div id = "descriptions">
+      <h2>Ingredient Description List</h2>
+
+      <p>A description of the fresh, meat-free ingredients:</p>
+
+      <dl>
+        <dt>Humous</dt>
+        <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
+        <dt>Pitta</dt>
+        <dd>A soft, slightly leavened flatbread.</dd>
+        <dt>Halloumi</dt>
+        <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
+        <dt>Green salad</dt>
+        <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
+      </dl>
+    </div>
+
+
+  </body>
+</html>
