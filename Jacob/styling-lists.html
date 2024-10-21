@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Styling lists</title>
+    <style>
+      /* General styles */
+
+      html {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 10px;
+      }
+
+      h2 {
+        font-size: 3rem;
+        font-family: 'Gill Sans MT';
+      }
+
+      ul,ol,dl,p {
+        font-size: 1.5rem;
+      }
+
+      li, p {
+        line-height: 1.5;
+      }
+
+      /* Unordered list styles */
+
+      ul {
+        padding-left: 2rem;
+        list-style-type: none;
+      }
+
+      ul li {
+        padding-left: 2rem;
+        background-image: url(bullet.png);
+        background-position: 0 0;
+        background-size: 1.6rem 1.6rem;
+        background-repeat: no-repeat;
+        font-weight: bold;
+      }
+
+      /* Ordered list styles */
+
+      ol {
+        list-style-type: decimal;
+      }
+
+      /* Description list styles */
+
+      dd, dt {
+        line-height: 1.5;
+        font-size: large;
+      }
+
+      dt {
+        font-weight: bold;
+      }
+
+      hr.rounded{
+        border-top: 3px solid #bbb;
+        border-radius: 5px;
+      }
+
+      .column{
+        float: left;
+      }
+      .left{
+        width: 25%
+      }
+
+      .right{
+        width: 70%
+      }
+
+
+      .row:after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+
+      @media screen and (max-width: 600px){
+        .column{
+          width: 100%;
+        }
+      }
+
+      details{
+        padding-left: 2em;
+        font-size: x-large;
+        background-color:aliceblue;
+        border: #bbb;
+        border-color: black;
+        height: 100px;
+      }
+
+      summary{
+
+      }
+
+      .expandable{
+        background-color:ghostwhite;
+      }
+
+
+    </style>
+  </head>
+  <body>
+   
+    <div class="row">
+      <hr class="rounded">
+        <h2>Shopping list</h2>
+        <hr class="rounded">
+      <div class="column left">
+        <img src="hummus.jpg", alt="hummus", height="200", title="Hummus">
+        <img src="pitta.jpg", alt="pitta", height="200", title="Pitta">
+        <br>
+        <img src="salad.jpg", alt="salad", height="200", title="Salad">
+        <img src="halloumi.jpg", alt="halloumi", height="200", title="Halloumi">
+      </div>
+      <div class="column right">
+        
+        <details>
+          <summary>Humous</summary>
+          <dd class="expandable">A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
+        </details>
+
+        <details>
+          <summary>Pitta</summary>
+          <dd class="expandable">A soft, slightly leavened flatbread.</dd>
+        </details>
+
+        <details>
+          <summary>Halloumi</summary>
+          <dd class="expandable">A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
+        </details>
+
+        <details>
+          <summary>Green Salad</summary>
+          <dd class="expandable">That green healthy stuff that many of us just use to garnish kebabs.</dd>
+        </details>
+      </div>
+    </div>
+    
+
+    
+
+
+
+    <br>
+    <hr>
+    
+
+    <h2>Recipe list</h2>
+    <hr class="rounded">
+
+    <p>Creating our pitta is easy! - simply follow the steps below:</p>
+
+    <ol start="1">
+      <li>Toast pitta, leave to cool, then slice down the edge.</li>
+      <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+      <li>Wash and chop the salad.</li>
+      <li>Fill pitta with salad, humous, and fried halloumi.</li>
+    </ol>
+
+    
+
+  </body>
+</html>
