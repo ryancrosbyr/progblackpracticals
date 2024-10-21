@@ -12,6 +12,20 @@
         font-size: 10px;
       }
 
+      h1 {
+        text-decoration: underline;
+        color: black;
+        font-size: 3rem;
+        text-align: center;
+        background-image: url(leaf.png);
+        background-position: top left;
+        background-repeat: repeat-x;
+        background-color: rgba(255,255,255,0.4);
+        background-blend-mode: lighten;
+        margin: 10px;
+        padding: 20px;
+      }
+
       h2 {
         font-size: 2rem;
       }
@@ -24,11 +38,15 @@
         line-height: 1.5;
       }
 
+      p {
+        font-style: italic;
+      }
+
       /* Unordered list styles */
 
       ul {
         padding-left: 2rem;
-        list-style-type: none;
+        list-style-type: square;
       }
 
       ul li {
@@ -55,45 +73,69 @@
         font-weight: bold;
       }
 
+      #shopping-list:hover {
+        background-color: #377b6d;
+        transition-duration: 0.2s;
+      }
+
+      #recipes:hover {
+        background-color: #8bcabd;
+        transition-duration: 0.2s;
+      }
+
+      #descriptions:hover {
+        background-color: #e5f3f0;
+        transition-duration: 0.2s;
+      }
+
+
     </style>
   </head>
   <body>
-    <h2>Shopping (unordered) list</h2>
+    <h1>Vegetarian Meal Plan</h1>
 
-    <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
+    <div id = "shopping-list">
+      <h2>Shopping List</h2>
 
-    <ul>
-      <li>Humous</li>
-      <li>Pitta</li>
-      <li>Green salad</li>
-      <li>Halloumi</li>
-    </ul>
+      <p>The vegetarian ingredients for your meal:</p>
 
-    <h2>Recipe (ordered) list</h2>
+      <ul>
+        <li>Humous</li>
+        <li>Pitta</li>
+        <li>Green salad</li>
+        <li>Halloumi</li>
+      </ul>
+    </div>
 
-    <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
+    <div id = "recipes">
+      <h2>Recipe List</h2>
 
-    <ol start="4">
-      <li>Toast pitta, leave to cool, then slice down the edge.</li>
-      <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
-      <li>Wash and chop the salad.</li>
-      <li>Fill pitta with salad, humous, and fried halloumi.</li>
-    </ol>
+      <p>The instructions to turn ingredients into a delicious meal:</p>
 
-    <h2>Ingredient description list</h2>
+      <ol start="4">
+        <li>Toast pitta, leave to cool, then slice down the edge.</li>
+        <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+        <li>Wash and chop the salad.</li>
+        <li>Fill pitta with salad, humous, and fried halloumi.</li>
+      </ol>
+    </div>
 
-    <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
+    <div id = "descriptions">
+      <h2>Ingredient Description List</h2>
 
-    <dl>
-      <dt>Humous</dt>
-      <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
-      <dt>Pitta</dt>
-      <dd>A soft, slightly leavened flatbread.</dd>
-      <dt>Halloumi</dt>
-      <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
-      <dt>Green salad</dt>
-      <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
-    </dl>
+      <p>A description of the fresh, meat-free ingredients:</p>
+
+      <dl>
+        <dt>Humous</dt>
+        <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
+        <dt>Pitta</dt>
+        <dd>A soft, slightly leavened flatbread.</dd>
+        <dt>Halloumi</dt>
+        <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
+        <dt>Green salad</dt>
+        <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
+      </dl>
+    </div>
 
 
   </body>
