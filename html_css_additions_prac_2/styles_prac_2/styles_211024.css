@@ -1,0 +1,56 @@
+html {
+    font-size: 10px; /* px = pixels. Base font size = 10 pixels high*/
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+}
+
+/* General styles */
+
+h2 {
+    font-size: 2rem;
+    
+  }
+
+  ul,ol,dl,p {
+    font-size: 1.5rem;
+  }
+
+  li, p {
+    line-height: 1.5;
+  }
+/* Unordered list styles */
+ul {
+    padding-left: 2rem;
+    list-style-type: none;
+}
+/*Image stored in a container*/
+/*Container altered to alter image*/
+.halloumi_container {
+    margin-left: auto;
+    display: block;
+    max-width: 100px;
+    max-height: 100px;
+
+}
+
+ul li {
+    padding-left: 2rem;
+    background-size: 1.6rem;
+    background-repeat: no-repeat;
+}
+
+/* Ordered list styles */
+
+ol {
+    list-style-type: upper-roman;
+}
+
+/* Description list styles */
+
+dd, dt {
+    line-height: 1.5;
+}
+
+dt {
+    font-weight: bold;
+}
