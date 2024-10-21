@@ -3,9 +3,9 @@ body{
     font-family: 'Times New Roman', Times, serif;
 }
 
-table, th, td{
-    border: 1px;
-    border-color: darkgreen;
+table, th, td, tr{
+    border: 5px;
+    border-color: black;
 }
 
 h1 {
