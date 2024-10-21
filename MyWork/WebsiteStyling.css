@@ -1,0 +1,21 @@
+body{
+    background-color: gold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+table, th, td{
+    border: 1px;
+    border-color: darkgreen;
+}
+
+h1 {
+    color: green;
+}
+
+h2 {
+    color: blue;
+}
+
+p {
+    color: purple;
+}
