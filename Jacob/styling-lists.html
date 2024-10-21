@@ -38,6 +38,7 @@
         background-position: 0 0;
         background-size: 1.6rem 1.6rem;
         background-repeat: no-repeat;
+        font-weight: bold;
       }
 
       /* Ordered list styles */
@@ -50,6 +51,7 @@
 
       dd, dt {
         line-height: 1.5;
+        font-size: large;
       }
 
       dt {
@@ -86,22 +88,32 @@
         }
       }
 
+      details{
+        padding-left: 2em;
+        font-size: x-large;
+        background-color:aliceblue;
+        border: #bbb;
+        border-color: black;
+        height: 100px;
+      }
+
+      summary{
+
+      }
+
+      .expandable{
+        background-color:ghostwhite;
+      }
+
 
     </style>
   </head>
   <body>
-    <hr class="rounded">
-    <h2>Shopping list</h2>
-    <hr class="rounded">
-    <p>Below is a list of all the ingredients you will need to buy</p>
-
-    <ul>
-      <li>Humous</li>
-      <li>Pitta</li>
-      <li>Green salad</li>
-      <li>Halloumi</li>
-    </ul>
+   
     <div class="row">
+      <hr class="rounded">
+        <h2>Shopping list</h2>
+        <hr class="rounded">
       <div class="column left">
         <img src="hummus.jpg", alt="hummus", height="200", title="Hummus">
         <img src="pitta.jpg", alt="pitta", height="200", title="Pitta">
@@ -110,20 +122,26 @@
         <img src="halloumi.jpg", alt="halloumi", height="200", title="Halloumi">
       </div>
       <div class="column right">
-        <h2>Ingredient description list</h2>
+        
+        <details>
+          <summary>Humous</summary>
+          <dd class="expandable">A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
+        </details>
 
-        <p>An in depth description of each of the </p>
-    
-        <dl>
-          <dt>Humous</dt>
-          <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
-          <dt>Pitta</dt>
-          <dd>A soft, slightly leavened flatbread.</dd>
-          <dt>Halloumi</dt>
-          <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
-          <dt>Green salad</dt>
-          <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
-        </dl>
+        <details>
+          <summary>Pitta</summary>
+          <dd class="expandable">A soft, slightly leavened flatbread.</dd>
+        </details>
+
+        <details>
+          <summary>Halloumi</summary>
+          <dd class="expandable">A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
+        </details>
+
+        <details>
+          <summary>Green Salad</summary>
+          <dd class="expandable">That green healthy stuff that many of us just use to garnish kebabs.</dd>
+        </details>
       </div>
     </div>
     
