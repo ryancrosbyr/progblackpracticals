@@ -10,6 +10,7 @@
       html {
         font-family: Helvetica, Arial, sans-serif;
         font-size: 10px;
+        text-align: center;
       }
 
       h2 {
@@ -24,26 +25,25 @@
         line-height: 1.5;
       }
 
+      p {
+        color: darksalmon;
+      }
+
       /* Unordered list styles */
 
       ul {
-        padding-left: 2rem;
-        list-style-type: none;
+        list-style-type: square;
       }
 
-      ul li {
-        padding-left: 2rem;
+      ul, li {
         background-image: url(star.svg);
         background-position: 0 0;
         background-size: 1.6rem 1.6rem;
         background-repeat: no-repeat;
+        list-style-position: inside;
       }
 
       /* Ordered list styles */
-
-      ol {
-        list-style-type: upper-roman;
-      }
 
       /* Description list styles */
 
@@ -55,12 +55,18 @@
         font-weight: bold;
       }
 
+      /* Label style */
+
+      label {
+        font-weight: bold;
+      }
+
     </style>
   </head>
   <body>
-    <h2>Shopping (unordered) list</h2>
+    <h2>Shopping list</h2>
 
-    <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
+    <p>Cost money but yummy</p>
 
     <ul>
       <li>Humous</li>
@@ -69,29 +75,33 @@
       <li>Halloumi</li>
     </ul>
 
-    <h2>Recipe (ordered) list</h2>
+    <h2>Recipe list</h2>
 
-    <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
+    <p>Yummy yummy yummy yummy oh so yummy i love humous</p>
 
-    <ol start="4">
+    <ol start="1">
       <li>Toast pitta, leave to cool, then slice down the edge.</li>
       <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
       <li>Wash and chop the salad.</li>
       <li>Fill pitta with salad, humous, and fried halloumi.</li>
     </ol>
 
-    <h2>Ingredient description list</h2>
+    <h2>Ingredient list</h2>
 
-    <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
+    <p>Make sure you have these...</p>
 
     <dl>
-      <dt>Humous</dt>
+      <label for="checkbox1">Humous</label>
+      <input type="checkbox" id="checkbox1">
       <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
-      <dt>Pitta</dt>
+      <label for="checkbox2">Pitta</label>
+      <input type="checkbox" id="checkbox2">
       <dd>A soft, slightly leavened flatbread.</dd>
-      <dt>Halloumi</dt>
+      <label for="checkbox3">Halloumi</label>
+      <input type="checkbox" id="checkbox3">
       <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
-      <dt>Green salad</dt>
+      <label for="checkbox4">Green Salad</label>
+      <input type="checkbox" id="checkbox4">
       <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
     </dl>
 
