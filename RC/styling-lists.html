@@ -6,11 +6,11 @@
     <title>Styling lists</title>
     <style>
       /* General styles */
+      /* When adjusting the styling you would need to keep the same vertical spacing as the surrounding elements and the same horizontal spacing as each other */
 
       html {
         font-family: Helvetica, Arial, sans-serif;
-        font-size: 10px;
-      }
+        font-size: 10px;}
 
       h2 {
         font-size: 2rem;
@@ -18,22 +18,30 @@
 
       ul,ol,dl,p {
         font-size: 1.5rem;
+        color: pink;
       }
 
       li, p {
-        line-height: 1.5;
+        line-height: 1.5; /* The line height would keep the same spacing between the lines. Keeping a constant vertical rhythm */
       }
 
       /* Unordered list styles */
 
+      @counter-style thumbs {
+        system: cyclic;
+        symbols: "\1F44D";
+        suffix: " ";
+      }
+
       ul {
         padding-left: 2rem;
-        list-style-type: none;
+        list-style-type: thumbs;
+        list-style-position: outside; 
       }
 
       ul li {
         padding-left: 2rem;
-        background-image: url(star.svg);
+        background-image: url(star.png);
         background-position: 0 0;
         background-size: 1.6rem 1.6rem;
         background-repeat: no-repeat;
@@ -43,6 +51,7 @@
 
       ol {
         list-style-type: upper-roman;
+        list-style-position: outside;
       }
 
       /* Description list styles */
@@ -73,7 +82,7 @@
 
     <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
 
-    <ol start="4">
+    <ol start="75" reversed>
       <li>Toast pitta, leave to cool, then slice down the edge.</li>
       <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
       <li>Wash and chop the salad.</li>
@@ -84,8 +93,8 @@
 
     <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
 
-    <dl>
-      <dt>Humous</dt>
+    <dl> 
+      <dt>Humous</dt> 
       <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
       <dt>Pitta</dt>
       <dd>A soft, slightly leavened flatbread.</dd>
