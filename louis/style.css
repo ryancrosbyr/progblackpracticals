@@ -1,0 +1,32 @@
+html {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    font-style: italic;
+
+
+    }
+    h1 {
+        background-color: darkturquoise;
+        text-align: center;
+    }
+    h2 {
+        background-color: lightcoral;
+    }
+    ol{
+        color: brown;
+        background-color: green;
+        font-style: bold;
+    }
+    a{
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        color: darkmagenta;
+        background-color: orange;
+        font-size: x-large;
+    }
+    table, th, td{
+        border: 4px solid whitesmoke;
+        border-collapse:collapse;
+    }
+    th, td{
+        background-color: bisque;
+    }
