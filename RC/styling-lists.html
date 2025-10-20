@@ -37,6 +37,16 @@
         background-position: 0 0;
         background-size: 1.6rem 1.6rem;
         background-repeat: no-repeat;
+        transition: font-size 2s;
+      }
+
+      ul li:hover {
+          color: navy;
+          font-size: 150%;
+      }
+
+      ul:hover {
+          background-color: lightcyan;
       }
 
       /* Ordered list styles */
@@ -44,7 +54,18 @@
       ol {
         list-style-type: upper-roman;
       }
+      ol li {
+        transition: font-size 1s;
+      }
 
+      ol li:hover {
+          color: darkred;
+          font-size: 125%;
+      }
+
+      ol:hover {
+          background-color: pink;
+      }
       /* Description list styles */
 
       dd, dt {
