@@ -1,0 +1,19 @@
+
+body{
+    background-color:lightsteelblue;
+}
+ul {
+    list-style-image: url("fish-solid-full.svg");
+}
+
+dt {
+    text-decoration: underline;
+    color:midnightblue;
+
+}
+
+h2 {
+    color:midnightblue;
+}
+
+
