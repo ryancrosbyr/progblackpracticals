@@ -1,100 +1,166 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Styling lists</title>
-    <style>
-      /* General styles */
 
-      html {
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 10px;
-      }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Styling lists</title>
+  <style>
+    /* General styles */
+    html {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      color: white;
+    }
 
-      h2 {
-        font-size: 2rem;
-      }
+    body {
+      background-color: blueviolet;
+    }
 
-      ul,ol,dl,p {
-        font-size: 1.5rem;
-      }
+    h2 {
+      font-size: 2rem;
+    }
 
-      li, p {
-        line-height: 1.5;
-      }
+    ul,
+    ol,
+    dl,
+    p {
+      font-size: 2rem;
+      font-family: Source Code Pro;
+    }
 
-      /* Unordered list styles */
+    li,
+    p {
+      line-height: 1.5;
+    }
 
-      ul {
-        padding-left: 2rem;
-        list-style-type: none;
-      }
+    /* Unordered list styles */
 
-      ul li {
-        padding-left: 2rem;
-        background-image: url(star.svg);
-        background-position: 0 0;
-        background-size: 1.6rem 1.6rem;
-        background-repeat: no-repeat;
-      }
+    ul {
+      padding-left: 2rem;
+      list-style-type: none;
+    }
 
-      /* Ordered list styles */
+    ul li {
+      padding-left: 2rem;
+      background-image: url(star.svg);
+      background-position: 0 0;
+      background-size: 1.6rem 1.6rem;
+      background-repeat: no-repeat;
+    }
 
-      ol {
-        list-style-type: upper-roman;
-      }
+    /* Ordered list styles */
 
-      /* Description list styles */
+    ol {
+      list-style-type: upper-roman;
+    }
 
-      dd, dt {
-        line-height: 1.5;
-      }
+    /* Description list styles */
 
-      dt {
-        font-weight: bold;
-      }
+    dd,
+    dt {
+      line-height: 1.5;
+    }
 
-    </style>
-  </head>
-  <body>
-    <h2>Shopping (unordered) list</h2>
+    dt {
+      font-weight: bold;
+    }
 
-    <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
+    table {
+      font-size: 30px;
+      border-radius: 5px;
+      border-style: dotted;
+    }
 
-    <ul>
-      <li>Humous</li>
-      <li>Pitta</li>
-      <li>Green salad</li>
-      <li>Halloumi</li>
-    </ul>
+    td,
+    th,
+    tr {
+      width: 300px;
+      text-align: center;
+    }
 
-    <h2>Recipe (ordered) list</h2>
+    img {
+      width: 200px;
+      height: 250px;
+    }
+  </style>
+</head>
 
-    <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
+<body>
+  <h2>Shopping (unordered) list</h2>
 
-    <ol start="4">
-      <li>Toast pitta, leave to cool, then slice down the edge.</li>
-      <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
-      <li>Wash and chop the salad.</li>
-      <li>Fill pitta with salad, humous, and fried halloumi.</li>
-    </ol>
+  <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for
+    reference, paragraph for reference.</p>
 
-    <h2>Ingredient description list</h2>
+  <ul>
+    <li>Humous</li>
+    <li>Pitta</li>
+    <li>Green salad</li>
+    <li>Halloumi</li>
+  </ul>
 
-    <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
+  <h2>Recipe (ordered) list</h2>
 
-    <dl>
-      <dt>Humous</dt>
-      <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
-      <dt>Pitta</dt>
-      <dd>A soft, slightly leavened flatbread.</dd>
-      <dt>Halloumi</dt>
-      <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
-      <dt>Green salad</dt>
-      <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
-    </dl>
+  <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for
+    reference, paragraph for reference.</p>
+
+  <ol start="4">
+    <li>Toast pitta, leave to cool, then slice down the edge.</li>
+    <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+    <li>Wash and chop the salad.</li>
+    <li>Fill pitta with salad, humous, and fried halloumi.</li>
+  </ol>
+
+  <h2>Ingredient description list</h2>
+
+  <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for
+    reference, paragraph for reference.</p>
+
+  <dl>
+    <dt>Humous</dt>
+    <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other
+      ingredients.</dd>
+    <dt>Pitta</dt>
+    <dd>A soft, slightly leavened flatbread.</dd>
+    <dt>Halloumi</dt>
+    <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.
+    </dd>
+    <dt>Green salad</dt>
+    <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
+  </dl>
+
+  <table>
+    <tr>
+      <th>Ingredient</th>
+      <th>Picture</th>
+    </tr>
+    <tr>
+      <td>Humous</td>
+      <td><img
+          src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fcdn.loveandlemons.com%2Fwp-content%2Fuploads%2F2019%2F09%2Fhummus.jpg&sp=1761034562T4f8823f52cda788777b25972e6c608175151647186658a45a24027840bd4f4b9">
+      </td>
+    </tr>
+    <tr>
+      <td>Pitta</td>
+      <td><img
+          src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Flovefoodfeed.com%2Fwp-content%2Fuploads%2F2025%2F01%2FPitta-bread-recipe-1200-03-768x768.jpg&sp=1761034654Tb1678813da6bebb4d29ec37bc2c3949d1b212be2f9ea23b1d9916559577c4933">
+      </td>
+    </tr>
+    <tr>
+      <td>Halloumi</td>
+      <td><img
+          src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fwww.mygreekdish.com%2Fwp-content%2Fuploads%2F2023%2F04%2FPan-fried-Halloumi-recipe.jpeg&sp=1761034708T54d90ced1f069d36985bdabaf42b7570ac2cc50a1010daa046fae66c3742f91e">
+      </td>
+    </tr>
+    <tr>
+      <td>Green Salad</td>
+      <td><img
+          src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fcdn.loveandlemons.com%2Fwp-content%2Fuploads%2F2021%2F04%2Fgreen-salad-recipes.jpg&sp=1761034800Tada5d3aa86e368142d66479463c795d3cd9f8b80d469065258c6bc58a33e8f3e">
+      </td>
+    </tr>
+  </table>
 
 
-  </body>
+</body>
+
 </html>
