@@ -8,8 +8,30 @@
       /* General styles */
 
       html {
+      background-color: #025621;
+      }
+
+      p {
+        font-family: sans-serif;
+        color: rgb(255, 153, 0);
+        font-weight: bold;
+      }
+
+      li {
+        background-color: rgb(255, 47, 47);
+        border: 1px solid black;
+        margin-bottom: 5px;
+      }
+
+      dd {
+        background-color: yellow;
+        border: 1px solid black;
+        margin-bottom: 5px;
+      }
+
+      html {
         font-family: Helvetica, Arial, sans-serif;
-        font-size: 10px;
+        font-size: 12px;
       }
 
       h2 {
@@ -31,7 +53,8 @@
         list-style-type: none;
       }
 
-      ul li {
+      ol li {
+        list-style-type: upper-alpha;
         padding-left: 2rem;
         background-image: url(star.svg);
         background-position: 0 0;
@@ -42,7 +65,7 @@
       /* Ordered list styles */
 
       ol {
-        list-style-type: upper-roman;
+        list-style-type: upper-alpha;
       }
 
       /* Description list styles */
@@ -52,7 +75,7 @@
       }
 
       dt {
-        font-weight: bold;
+        font-weight: lighter;
       }
 
     </style>
@@ -62,22 +85,24 @@
 
     <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
 
-    <ul>
-      <li>Humous</li>
+    <ol start="3">
+      <li>Humousnessness</li>
       <li>Pitta</li>
-      <li>Green salad</li>
+      <li><strong>Green salad</strong></li>
       <li>Halloumi</li>
-    </ul>
+      <li>Surprising Rice</li>
+    </ol>
 
     <h2>Recipe (ordered) list</h2>
 
     <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
 
-    <ol start="4">
+    <ol start="5">
       <li>Toast pitta, leave to cool, then slice down the edge.</li>
       <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
-      <li>Wash and chop the salad.</li>
+      <li>Wash and chop the <strong>green salad</strong>.</li>
       <li>Fill pitta with salad, humous, and fried halloumi.</li>
+      <li>Add the special ingredient...</li>
     </ol>
 
     <h2>Ingredient description list</h2>
@@ -85,16 +110,21 @@
     <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
 
     <dl>
-      <dt>Humous</dt>
-      <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
+      <dt>Humousnessness</dt>
+      <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients ness ness.</dd>
       <dt>Pitta</dt>
       <dd>A soft, slightly leavened flatbread.</dd>
-      <dt>Halloumi</dt>
+      <dt>Hal Oom Me</dt>
       <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
-      <dt>Green salad</dt>
-      <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
+      <dt><strong>Green salad</strong></dt>
+      <dd>That <strong>green</strong> healthy stuff that many of us just use to garnish kebabs.</dd>
+      <dt>Surprising Rice</dt>
+      <dd>An MJN speciality.</dd>
     </dl>
 
+    <img src="CabinPressure.jpg"
+    alt="MJN air crew"
+    width="50%"/>
 
   </body>
 </html>
