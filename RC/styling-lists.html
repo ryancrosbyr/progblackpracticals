@@ -1,100 +1,444 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Styling lists</title>
-    <style>
-      /* General styles */
 
-      html {
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 10px;
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Styling lists</title>
+  <style>
+    /* General styles */
+
+    /* Custom font declaration - loads the Gabarito font from a local file */
+    @font-face {
+      font-family: "Gabarito", sans-serif;
+      /* Name to reference this font */
+      src: url("Gabarito-Regular.ttf") format("truetype");
+      /* Font file location and format */
+    }
+
+    /* Universal selector - applies to all elements */
+    * {
+      margin: 0;
+      /* Removes default margins from all elements */
+      padding: 0;
+      /* Removes default padding from all elements */
+      box-sizing: border-box;
+      /* Makes padding and border included in element's total width/height */
+    }
+
+    /* Main body styles */
+    body {
+      font-family: "Gabarito", sans-serif;
+      /* Applies the custom font to all text */
+      background: #f5f5f5;
+      /* Simple light gray background */
+      min-height: 100vh;
+      /* Ensures body takes at least full viewport height */
+      padding: 3rem;
+      /* Adds 3rem spacing around all content */
+      color: #2d3748;
+      /* Sets default text color to dark gray */
+      max-width: 800px;
+      /* Limits content width for better readability */
+      margin: 0 auto;
+      /* Centers content horizontally */
+    }
+
+    /* Heading 2 styles */
+    h2 {
+      font-size: 2rem;
+      /* Makes headings large and prominent */
+      color: #2d3748;
+      /* Dark gray for minimal look */
+      margin: 2.5rem 0 1rem;
+      /* Spacing: 2.5rem top, 0 left/right, 1rem bottom */
+      font-weight: 600;
+      /* Medium bold weight */
+      display: flex;
+      /* Enables flexbox for inline alignment */
+      align-items: center;
+      /* Vertically centers items */
+      gap: 0.5rem;
+      /* Space between heading text and tooltip */
+    }
+
+    /* Shared styles for all lists and paragraphs */
+    ul,
+    ol,
+    dl,
+    p {
+      font-size: 1.1rem;
+      /* Sets readable text size */
+      background: #fff;
+      /* Clean white background */
+      padding: 1.5rem;
+      /* Inner spacing on all sides */
+      border-radius: 4px;
+      /* Subtle rounded corners */
+      border: 1px solid #e2e8f0;
+      /* Light gray border */
+      margin-bottom: 1.5rem;
+      /* Space between content blocks */
+    }
+
+    /* Line height for list items and paragraphs */
+    li,
+    p {
+      line-height: 1.8;
+      /* 1.8x the font size for better readability */
+    }
+
+    /* Paragraph-specific styling */
+    p {
+      color: #718096;
+      /* Medium gray text color */
+      font-style: italic;
+      /* Italicizes paragraph text */
+      background: #fafafa;
+      /* Very light gray background to differentiate from lists */
+    }
+
+    /* Unordered list styles */
+
+    /* Shopping list container */
+    ul {
+      padding-left: 0;
+      /* No left padding */
+      list-style-type: none;
+      /* Removes default bullet points */
+    }
+
+    /* Individual shopping list items */
+    ul li {
+      padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+      /* Padding: moderate spacing with room for icon */
+      background-image: url(/RC/star.svg);
+      /* Custom star icon as bullet replacement */
+      background-position: 0.5rem center;
+      /* Positions icon 0.5rem from left, vertically centered */
+      background-size: 1.2rem 1.2rem;
+      /* Smaller icon for minimal look */
+      background-repeat: no-repeat;
+      /* Prevents icon from tiling */
+      margin-bottom: 0.5rem;
+      /* Space between list items */
+    }
+
+    /* Ordered list styles */
+
+    /* Recipe list container */
+    ol {
+      list-style-type: upper-roman;
+      /* Uses upper Roman numerals (I, II, III, IV, etc.) */
+      padding-left: 2.5rem;
+      /* Left padding to make space for Roman numerals */
+    }
+
+    /* Individual recipe steps */
+    ol li {
+      padding: 0.75rem 0.75rem 0.75rem 0.5rem;
+      /* Padding around each list item */
+      margin-bottom: 0.75rem;
+      /* Space between steps */
+    }
+
+    /* Description list styles */
+
+    /* Shared styles for terms and definitions */
+    dd,
+    dt {
+      line-height: 1.8;
+      /* Comfortable line spacing for readability */
+    }
+
+    /* Definition term (ingredient name) */
+    dt {
+      font-weight: 600;
+      /* Makes term stand out */
+      color: #2d3748;
+      /* Dark gray color */
+      margin-top: 1rem;
+      /* Space above each term */
+    }
+
+    /* Removes top margin from first term */
+    dt:first-of-type {
+      margin-top: 0;
+      /* No margin at top of list */
+    }
+
+    /* Definition description (ingredient explanation) */
+    dd {
+      margin-left: 1.5rem;
+      /* Indents description from term */
+      margin-top: 0.25rem;
+      /* Small space below term */
+      margin-bottom: 1rem;
+      /* Space before next term */
+      color: #718096;
+      /* Medium gray text */
+    }
+
+    /* Responsive design - adjusts layout for mobile devices */
+    @media (max-width: 768px) {
+      /* Applies when screen width is 768px or less */
+
+      body {
+        padding: 1rem;
+        /* Reduces padding for smaller screens */
       }
 
       h2 {
-        font-size: 2rem;
-      }
-
-      ul,ol,dl,p {
         font-size: 1.5rem;
+        /* Smaller heading size for mobile */
       }
 
-      li, p {
-        line-height: 1.5;
-      }
-
-      /* Unordered list styles */
-
-      ul {
-        padding-left: 2rem;
-        list-style-type: none;
+      ul,
+      ol,
+      dl,
+      p {
+        font-size: 1rem;
+        /* Smaller text size for mobile readability */
+        padding: 1rem;
+        /* Reduces padding to save space */
       }
 
       ul li {
         padding-left: 2rem;
-        background-image: url(star.svg);
-        background-position: 0 0;
-        background-size: 1.6rem 1.6rem;
-        background-repeat: no-repeat;
+        /* Less left padding */
       }
 
-      /* Ordered list styles */
+      ol li {
+        padding-left: 2rem;
+        /* Less left padding */
+      }
+    }
 
-      ol {
-        list-style-type: upper-roman;
+    /* From Uiverse.io by Cksunandh */
+
+    /* Tooltip container */
+    .tooltip-container {
+      position: relative;
+      /* Positioning context for tooltip */
+      display: inline-block;
+      /* Inline with heading text */
+      margin: 0;
+      /* No extra margin */
+    }
+
+    /* Icon styling */
+    .icon {
+      width: 24px;
+      /* Smaller icon to match heading size */
+      height: 24px;
+      /* Smaller icon to match heading size */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+    }
+
+    /* SVG Animation: Rotate and scale effect */
+    .icon svg {
+      width: 24px;
+      /* Smaller SVG size */
+      height: 24px;
+      /* Smaller SVG size */
+      fill: #718096;
+      /* Gray color to match theme */
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .icon:hover svg {
+      transform: rotate(360deg) scale(1.2);
+      fill: #2d3748;
+      /* Darker on hover */
+    }
+
+    /* Tooltip styling */
+    .tooltip {
+      visibility: hidden;
+      width: 300px;
+      /* Wider tooltip for better readability */
+      background-color: #2d3748;
+      /* Dark background */
+      color: #fff;
+      text-align: left;
+      /* Left-aligned text */
+      border-radius: 5px;
+      padding: 10px;
+      position: absolute;
+      top: 125%;
+      /* Position below the icon (changed from bottom) */
+      left: 50%;
+      margin-left: -150px;
+      /* Center the tooltip (half of width) */
+      opacity: 0;
+      transition:
+        opacity 0.5s,
+        transform 0.5s;
+      transform: translateY(-10px);
+      /* Start slightly above for animation */
+      z-index: 1000;
+      /* Ensure tooltip appears above other content */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      /* Subtle shadow */
+    }
+
+    .tooltip p {
+      margin: 0;
+      /* Remove default paragraph margin */
+      padding: 0;
+      /* Remove padding */
+      background: transparent;
+      /* No background */
+      border: none;
+      /* No border */
+      color: #fff;
+      /* White text */
+      font-style: normal;
+      /* Not italic */
+      font-size: 0.9rem;
+      /* Slightly smaller text */
+    }
+
+    /* Tooltip Arrow */
+    .tooltip::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      /* Position arrow at top of tooltip (pointing up) */
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent #2d3748 transparent;
+      /* Arrow points up */
+    }
+
+    /* Show tooltip on hover */
+    .tooltip-container:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes bounce {
+
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
       }
 
-      /* Description list styles */
-
-      dd, dt {
-        line-height: 1.5;
+      40% {
+        transform: translateY(30px);
+        /* Bounce down instead of up */
       }
 
-      dt {
-        font-weight: bold;
+      60% {
+        transform: translateY(15px);
+        /* Bounce down instead of up */
       }
+    }
 
-    </style>
-  </head>
-  <body>
-    <h2>Shopping (unordered) list</h2>
+    .tooltip-container:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      animation: bounce 0.6s ease;
+    }
+  </style>
+</head>
 
-    <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
+<body>
+  <h2>
+    Shopping (unordered) list
+    <!-- From Uiverse.io by Cksunandh -->
+    <div class="tooltip-container">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22c-5.518 0-10-4.482-10-10s4.482-10 10-10 10 4.482 10 10-4.482 10-10 10zm-1-16h2v6h-2zm0 8h2v2h-2z">
+          </path>
+        </svg>
+      </div>
+      <div class="tooltip">
+        <p>Marzipan liquorice brownie caramels topping lemon drops gummies. Icing cotton candy pastry marshmallow danish
+          caramels. Jelly beans liquorice cupcake cake sugar plum pie macaroon tiramisu soufflé.</p>
+      </div>
+    </div>
+  </h2>
 
-    <ul>
-      <li>Humous</li>
-      <li>Pitta</li>
-      <li>Green salad</li>
-      <li>Halloumi</li>
-    </ul>
+  <ul>
+    <li>Humous</li>
+    <li>Pitta</li>
+    <li>Green salad</li>
+    <li>Halloumi</li>
+  </ul>
 
-    <h2>Recipe (ordered) list</h2>
-
-    <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
-
-    <ol start="4">
-      <li>Toast pitta, leave to cool, then slice down the edge.</li>
-      <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
-      <li>Wash and chop the salad.</li>
-      <li>Fill pitta with salad, humous, and fried halloumi.</li>
-    </ol>
-
-    <h2>Ingredient description list</h2>
-
-    <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
-
-    <dl>
-      <dt>Humous</dt>
-      <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
-      <dt>Pitta</dt>
-      <dd>A soft, slightly leavened flatbread.</dd>
-      <dt>Halloumi</dt>
-      <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
-      <dt>Green salad</dt>
-      <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
-    </dl>
+  <h2>Recipe (ordered) list
+    <!-- From Uiverse.io by Cksunandh -->
+    <div class="tooltip-container">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22c-5.518 0-10-4.482-10-10s4.482-10 10-10 10 4.482 10 10-4.482 10-10 10zm-1-16h2v6h-2zm0 8h2v2h-2z">
+          </path>
+        </svg>
+      </div>
+      <div class="tooltip">
+        <p>Marshmallow marzipan toffee donut jelly-o cake. Jelly tiramisu liquorice pie chocolate bar candy canes
+          croissant lemon drops. Cotton candy oat cake gingerbread pudding wafer gingerbread cheesecake.</p>
+      </div>
+    </div>
+  </h2>
 
 
-  </body>
+  <ol>
+    <li>Toast pitta, leave to cool, then slice down the edge.</li>
+    <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+    <li>Wash and chop the salad.</li>
+    <li>Fill pitta with salad, humous, and fried halloumi.</li>
+  </ol>
+
+  <h2>Ingredient description list
+    <!-- From Uiverse.io by Cksunandh -->
+    <div class="tooltip-container">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22c-5.518 0-10-4.482-10-10s4.482-10 10-10 10 4.482 10 10-4.482 10-10 10zm-1-16h2v6h-2zm0 8h2v2h-2z">
+          </path>
+        </svg>
+      </div>
+      <div class="tooltip">
+        <p>Brownie gummi bears halvah cotton candy croissant liquorice. Sweet roll macaroon brownie marshmallow danish
+          pudding caramels topping jelly-o. Ice cream macaroon sweet wafer pie. Carrot cake chocolate ice cream bonbon
+          cake marzipan gingerbread gingerbread croissant.</p>
+      </div>
+    </div>
+  </h2>
+
+  <dl>
+    <dt>Humous</dt>
+    <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other
+      ingredients.</dd>
+    <dt>Pitta</dt>
+    <dd>A soft, slightly leavened flatbread.</dd>
+    <dt>Halloumi</dt>
+    <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.
+    </dd>
+    <dt>Green salad</dt>
+    <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
+  </dl>
+
+
+</body>
+
 </html>
