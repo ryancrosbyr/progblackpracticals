@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Styling lists</title>
+    <style>
+      /* General styles */
+
+      html {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 10px;
+      }
+
+      body {
+        margin: auto;
+        padding: 0px;
+      }
+
+      h2 {
+        font-size: 3rem;
+        text-align: center;
+        margin: auto;
+        padding: 10px;
+        background-color:bisque;
+        color:rgb(130, 86, 33);
+        border-style: dashed;
+        border-width: 1px;
+      }
+
+      ul,ol,dl,p {
+        font-size: 1.5rem;
+      }
+
+      p {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 15px;
+      }
+
+      li, p {
+        line-height: 1.5;
+      }
+
+      h1 {
+        background-color: rgb(185, 153, 114);
+        margin: 0px;
+        font-size: 40px;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+
+      /* Unordered list styles */
+
+      .centered_list {
+        text-align: center;
+        
+      }
+
+      ul {
+        list-style-type: none;
+        list-style-position: outside;
+        align-content: center;
+        margin: 25px;
+        display: inline-block;
+      }
+
+      ul li {
+        padding-left: 1rem;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        width: 20rem;
+        font-size: 20px;
+        text-align: center;
+        margin: 0px;
+        padding: 5px;
+      }
+
+      ul li a {
+        text-decoration: none;
+        color: black;
+        border-style: none;
+        border-width: 1px;
+        margin: 0px;
+        padding: 5px;
+      }
+
+      ul li a:hover {
+        color: grey;
+        background-color: lightgrey;
+        border-style: dotted;
+        border-width: 1px;
+      }
+
+      /* Ordered list styles */
+
+      ol {
+        list-style-type: decimal;
+
+      }
+
+      /* Description list styles */
+
+      dd, dt {
+        line-height: 1.5;
+      }
+
+      dt {
+        font-weight: bold;
+        font-size: 20px;
+        margin: 5px 10px;
+      }
+
+      dd a {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+      }
+
+      dd a:hover {
+        color: grey;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Pitta with Friend Halloumi, Houmous and Salad</h1>
+    <h2>Shopping (unordered) list</h2>
+
+    <p>Pressing a link leads to ingredient. The following items are needed to create the recipe specified:</p>
+    <div class="centered_list">
+      <ul>
+      <li><a href="https://www.tesco.com/groceries/en-GB/products/320968345?srsltid=AfmBOorDrtUKVCokEh7OP9G8mHNg61QG9b5GbO-W-vkAdBVPbF0grRc3">Houmous</a></li>
+      <li><a href="https://www.tesco.com/groceries/en-GB/products/254945564?srsltid=AfmBOopgM1y-cwGPFNrgB79QmBR3M-sh3sf-pEaDhWCzy_DLEAQtL1Hi">Pitta</a></li>
+      <li><a href="https://www.tesco.com/groceries/en-GB/products/311945898">Green salad</a></li>
+      <li><a href="https://www.tesco.com/groceries/en-GB/products/295580293?srsltid=AfmBOop5L-xp5HAbbHtKxpfozJjE5WGNUPpcW-em5tP3Hantfdfy6tRl">Halloumi</a></li>
+    </ul>
+    </div>
+    
+
+    <h2>Recipe (ordered) list</h2>
+
+    <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
+
+    <ol>
+      <li>Toast pitta, leave to cool, then slice down the edge.</li>
+      <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+      <li>Wash and chop the salad.</li>
+      <li>Fill pitta with salad, humous, and fried halloumi.</li>
+    </ol>
+
+    <h2>Ingredient description list</h2>
+
+    <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
+
+    <dl>
+      <dt>Humous</dt>
+      <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
+      <dd><a href="https://en.wikipedia.org/wiki/Hummus">Find out more..</a></dd>
+      <dt>Pitta</dt>
+      <dd>A soft, slightly leavened flatbread.</dd>
+      <dd><a href="https://en.wikipedia.org/wiki/Pita">Find out more..</a></dd>
+      <dt>Halloumi</dt>
+      <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
+      <dd><a href="https://en.wikipedia.org/wiki/Halloumi">Find out more..</a></dd>
+      <dt>Green salad</dt>
+      <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
+      <dd><a href="https://en.wikipedia.org/wiki/Salad">Find out more..</a></dd>
+    </dl>
+
+
+  </body>
+</html>
