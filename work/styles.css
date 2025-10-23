@@ -1,0 +1,33 @@
+@keyframes descriptionAnim
+{
+	0%{transform: translateX(100px);}
+	50%{transform: translateX(0px);}
+	100%{transform: translateX(100px);}
+}
+
+body
+{
+	background-color: rgba(25, 25, 25, 255);
+	color: rgba(230, 220, 200);
+}
+ul li {
+
+	border: 1px solid rgba(230, 220, 200);
+	width: 10%;
+	height: 8rem;
+	padding-top: 5rem;
+}
+
+ol:hover
+{
+	font-size: 3rem;
+}
+ol
+{
+	margin: 10rem;
+}
+
+dl
+{
+	animation: descriptionAnim 1s infinite;
+}
