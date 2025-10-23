@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Styling lists</title>
+    <style>
+      /* General styles */
+
+      html {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 10px;
+        color:aqua;
+        
+      }
+
+      body {
+        background-image: url(GreyBackground.jpg);
+      }
+
+      h2 {
+        font-size: 2rem;
+        -webkit-text-stroke-width: 0.8px;
+        -webkit-text-stroke-color: black;
+      }
+
+      ul,ol,dl,p {
+        font-size: 1.5rem;
+      }
+
+      li, p {
+        line-height: 1.5;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: black;
+      }
+
+      /* Unordered list styles */
+
+      ul {
+        padding-left: 2rem;
+        list-style-type: none;
+        border-color: black;
+        border-style: solid;
+        border-radius: 0.1cm;
+        border-width: 0.2cm;        
+      }
+
+      ul li {
+        padding-left: 2rem;
+        background-image: url(AquaDot.png);
+        background-position: 0 0;
+        background-size: 1.6rem 1.6rem;
+        background-repeat: no-repeat;
+      }
+
+      /* Ordered list styles */
+
+      ol {
+        list-style-type: upper-roman;
+        border-color: black;
+        border-style: solid;
+        border-radius: 0.1cm;
+        border-width: 0.2cm;
+      }
+
+      /* Description list styles */
+
+      dd {
+        border-color: black;
+        border-style: solid;
+        border-radius: 0.1cm;
+        border-width: 0.1cm;
+      }
+
+      dd, dt {
+        line-height: 3;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: black;
+      }
+
+      dt {
+        font-weight: bold;
+        border-color: black;
+        border-style: solid;
+        border-radius: 0.1cm;
+        border-width: 0.2cm;
+        -webkit-text-stroke-width: 0.8px;
+        -webkit-text-stroke-color: black;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h2>Shopping (unordered) list</h2>
+
+    <ul>
+      <li>Chips</li>
+      <li>Humous</li>
+      <li>Pitta</li>
+      <li>Green salad</li>
+      <li>Halloumi</li>
+    </ul>
+
+    <h2>Recipe (ordered) list</h2>
+
+    <ol start="4">
+      <li>Toast pitta, leave to cool, then slice down the edge.</li>
+      <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+      <li>Wash and chop the salad.</li>
+      <li>Fill pitta with salad, humous, and fried halloumi.</li>
+    </ol>
+
+    <h2>Ingredient description list</h2>
+
+    <dl>
+      <dt>Humous</dt>
+      <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
+      <dt>Pitta</dt>
+      <dd>A soft, slightly leavened flatbread.</dd>
+      <dt>Halloumi</dt>
+      <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
+      <dt>Green salad</dt>
+      <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
+    </dl>
+
+
+  </body>
+</html>
