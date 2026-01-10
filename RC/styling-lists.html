@@ -11,6 +11,14 @@
         font-family: Helvetica, Arial, sans-serif;
         font-size: 10px;
       }
+      
+      .myDiv + p{
+        font-size: 1.5rem;
+        color: black;
+        border-width: 5px;
+        border-color: black;
+        background-color: red;
+      }
 
       h2 {
         font-size: 2rem;
@@ -60,7 +68,7 @@
   <body>
     <h2>Shopping (unordered) list</h2>
 
-    <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
+    <p>Paragraph for reference, <br>paragraph for reference, paragraph for reference, paragraph for reference<br>, paragraph for reference, paragraph for reference.</p>
 
     <ul>
       <li>Humous</li>
@@ -73,13 +81,16 @@
 
     <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
 
-    <ol start="4">
+    <ol start="4" type = "1">
       <li>Toast pitta, leave to cool, then slice down the edge.</li>
       <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
       <li>Wash and chop the salad.</li>
       <li>Fill pitta with salad, humous, and fried halloumi.</li>
     </ol>
-
+    <hr>
+    <div id="myDiv">
+      <p>Of course, this would be better without humous, but whatever.</p>
+    </div>
     <h2>Ingredient description list</h2>
 
     <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
