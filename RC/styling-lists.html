@@ -10,12 +10,18 @@
       html {
         font-family: Helvetica, Arial, sans-serif;
         font-size: 10px;
+        
       }
 
       h2 {
         font-size: 2rem;
+        transition-property: font-size;
+        transition-duration: 1s;       
       }
-
+      h2:hover{
+        font-size: 3rem;
+      }
+      
       ul,ol,dl,p {
         font-size: 1.5rem;
       }
@@ -60,7 +66,7 @@
   <body>
     <h2>Shopping (unordered) list</h2>
 
-    <p>Paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference, paragraph for reference.</p>
+    <p>Hover text above.</p>
 
     <ul>
       <li>Humous</li>
